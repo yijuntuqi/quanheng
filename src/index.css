@@ -1,0 +1,65 @@
+@import '@fontsource/geist/400.css';
+@import '@fontsource/geist/500.css';
+@import '@fontsource/geist/600.css';
+@import '@fontsource/geist/700.css';
+@import '@fontsource/geist-mono/500.css';
+@import '@fontsource/instrument-serif/400-italic.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --paper: oklch(0.936 0.028 91);
+    --paper-2: oklch(0.908 0.028 91);
+    --paper-3: oklch(0.849 0.025 88);
+    --ink: oklch(0.25 0.045 171);
+    --ink-soft: oklch(0.4 0.036 171);
+    --chart: oklch(0.895 0.197 119);
+    --chart-dark: oklch(0.57 0.12 126);
+    --mint: oklch(0.85 0.12 153);
+    --yellow: oklch(0.82 0.14 88);
+    --line: oklch(0.25 0.045 171 / 0.16);
+    --line-strong: oklch(0.25 0.045 171 / 0.32);
+    --background: 48 42% 91%;
+    --foreground: 166 50% 11%;
+    --card: 48 42% 91%;
+    --card-foreground: 166 50% 11%;
+    --popover: 48 42% 91%;
+    --popover-foreground: 166 50% 11%;
+    --primary: 166 50% 11%;
+    --primary-foreground: 48 42% 91%;
+    --secondary: 48 31% 87%;
+    --secondary-foreground: 166 50% 11%;
+    --muted: 48 25% 85%;
+    --muted-foreground: 166 20% 29%;
+    --accent: 82 90% 62%;
+    --accent-foreground: 166 50% 11%;
+    --destructive: 12 60% 43%;
+    --destructive-foreground: 48 42% 91%;
+    --border: 166 25% 75%;
+    --input: 166 25% 70%;
+    --ring: 82 75% 45%;
+    --radius: 0.75rem;
+  }
+
+  * { @apply border-border; box-sizing: border-box; }
+  html { scroll-behavior: smooth; background: var(--paper); }
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100dvh;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Geist', 'PingFang SC', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  button, input, textarea { font: inherit; }
+  button, summary, input[type='range'] { cursor: pointer; }
+  button:disabled { cursor: not-allowed; }
+  ::selection { background: var(--chart); color: var(--ink); }
+  :focus-visible { outline: 2px solid var(--chart-dark); outline-offset: 3px; }
+}
