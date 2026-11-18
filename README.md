@@ -95,36 +95,6 @@ SENSENOVA_MODEL=sensenova-6.8-flash-lite
 
 > 密钥只能放在服务端环境变量中。不要添加 `VITE_` 前缀，不要提交 `.env`，也不要把真实 Key 写入 `.env.example`。
 
-## 常用命令
-
-```bash
-npm run dev      # 启动本地开发服务
-npm run check    # TypeScript 类型检查
-npm run lint     # ESLint
-npm run build    # 构建前端与服务端
-npm run preview  # 预览前端构建
-npm start        # 以生产模式启动 Node 服务
-```
-
-## 部署到 Netlify
-
-仓库已包含 `netlify.toml`。在 Netlify 中选择 **Import an existing project**，连接此 GitHub 仓库即可自动读取构建设置：
-
-- Build command：`npm run build`
-- Publish directory：`dist/public`
-- Functions directory：`netlify/functions`
-- Node.js：22
-
-在 **Project configuration → Environment variables** 中配置：
-
-| 变量 | 说明 | 是否作为 Secret |
-| --- | --- | --- |
-| `SENSENOVA_API_KEY` | SenseNova 密钥 | 是 |
-| `SENSENOVA_BASE_URL` | API 地址 | 否 |
-| `SENSENOVA_MODEL` | 模型名称 | 否 |
-
-添加或修改环境变量后重新部署。API 地址和模型名属于仓库中的公开配置，若误标记为 Secret，可能触发 Netlify Secret Scanning 并使构建失败。
-
 ## 项目结构
 
 ```text
